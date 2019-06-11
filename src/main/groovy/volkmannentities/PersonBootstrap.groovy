@@ -16,7 +16,9 @@ class PersonBootstrap {
         Address stCharles = new Address(town: 'St. Charles')
         Address ofallon = new Address(town: 'OFallon')
 
-        personService.save new Person(name: 'Jeff', homeAddress: ofallon)
+        def p = personService.save new Person(name: 'Jeff', homeAddress: ofallon)
         personService.save new Person(name: 'Mark', homeAddress: stCharles)
+
+        println "p.id is ${p.id}, p.homeAddress.id is ${p.homeAddress.id}"
     }
 }
