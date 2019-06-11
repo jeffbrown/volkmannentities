@@ -8,4 +8,6 @@ interface PersonService {
     List<Person> list()
 
     Person save(Person person)
+
+    Person get(long id)
 }
